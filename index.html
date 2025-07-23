@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Sacred Interface</title>
     <style>
+        #roots-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#roots-table th, #roots-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#roots-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
         body {
             font-family: 'Georgia', serif;
             background-color: #f8f4e3;
@@ -52,11 +66,51 @@
         }
     </style>
 </head>
+    fetch('roots.json')
+  .then(response => response.json())
+  .then(data => {
+    const tableBody = document.querySelector('#roots-table tbody');
+    data.roots.forEach(root => {
+      const row = document.createElement('tr');
+
+      const sound = document.createElement('td');
+      sound.textContent = root.sound;
+
+      const house = document.createElement('td');
+      house.textContent = root.house;
+
+      const meaning = document.createElement('td');
+      meaning.textContent = root.meaning;
+
+      row.appendChild(sound);
+      row.appendChild(house);
+      row.appendChild(meaning);
+      tableBody.appendChild(row);
+    });
+  })
+  .catch(error => {
+    console.error('Failed to load roots:', error);
+  });
 <body>
     <header>
         <h1>Welcome to the Sacred Interface</h1>
         <p>This is the living web interface for sacred creation and the Ilarian language.</p>
     </header>
+    <section id="root-display">
+  <h2>Ilarian Sacred Roots</h2>
+  <table id="roots-table">
+    <thead>
+      <tr>
+        <th>Sound</th>
+        <th>House</th>
+        <th>Meaning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data will be inserted here -->
+    </tbody>
+  </table>
+    </section>
     <nav>
         <a href="#roots">Ilarian Roots</a>
         <a href="#houses">The Seven Houses</a>
