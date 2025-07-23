@@ -1,0 +1,88 @@
+{
+  "roots": [
+    // House of Light
+    { "sound": "or", "house": "Light", "meaning": "source, origin" },
+    { "sound": "el", "house": "Light", "meaning": "radiance, divine" },
+    { "sound": "vi", "house": "Light", "meaning": "life, spark" },
+    { "sound": "lu", "house": "Light", "meaning": "flow, shine" },
+    { "sound": "ae", "house": "Light", "meaning": "eternity, breath" },
+    { "sound": "re", "house": "Light", "meaning": "reflection, echo" },
+    { "sound": "so", "house": "Light", "meaning": "sun, center" },
+    { "sound": "is", "house": "Light", "meaning": "purity, truth" },
+    { "sound": "al", "house": "Light", "meaning": "guidance, alignment" },
+    { "sound": "ir", "house": "Light", "meaning": "eye, perception" },
+    { "sound": "zi", "house": "Light", "meaning": "clarity, sky" },
+
+    // House of Flame
+    { "sound": "sha", "house": "Flame", "meaning": "descent, spirit" },
+    { "sound": "ven", "house": "Flame", "meaning": "movement, breath" },
+    { "sound": "ar", "house": "Flame", "meaning": "force, will" },
+    { "sound": "in", "house": "Flame", "meaning": "inner, self" },
+    { "sound": "kar", "house": "Flame", "meaning": "resolve, action" },
+    { "sound": "thar", "house": "Flame", "meaning": "command, surge" },
+    { "sound": "dra", "house": "Flame", "meaning": "power, deep fire" },
+    { "sound": "sol", "house": "Flame", "meaning": "soul, core" },
+    { "sound": "mir", "house": "Flame", "meaning": "transformation" },
+    { "sound": "zan", "house": "Flame", "meaning": "motion, storm" },
+
+    // House of Stone
+    { "sound": "dor", "house": "Stone", "meaning": "foundation, base" },
+    { "sound": "um", "house": "Stone", "meaning": "weight, memory" },
+    { "sound": "gran", "house": "Stone", "meaning": "stability, earth" },
+    { "sound": "tun", "house": "Stone", "meaning": "protection, shell" },
+    { "sound": "sel", "house": "Stone", "meaning": "shape, boundary" },
+    { "sound": "gal", "house": "Stone", "meaning": "gravity, dignity" },
+    { "sound": "mor", "house": "Stone", "meaning": "depth, silence" },
+    { "sound": "ek", "house": "Stone", "meaning": "edge, boundary" },
+    { "sound": "cen", "house": "Stone", "meaning": "pillar, spine" },
+    { "sound": "ark", "house": "Stone", "meaning": "structure, design" },
+    { "sound": "bel", "house": "Stone", "meaning": "weight, strength" },
+
+    // House of Water
+    { "sound": "nai", "house": "Water", "meaning": "peace, stillness" },
+    { "sound": "li", "house": "Water", "meaning": "flow, love" },
+    { "sound": "mel", "house": "Water", "meaning": "grace, softness" },
+    { "sound": "uvi", "house": "Water", "meaning": "purify, cleanse" },
+    { "sound": "shael", "house": "Water", "meaning": "sacred pool" },
+    { "sound": "lor", "house": "Water", "meaning": "dream, mist" },
+    { "sound": "vena", "house": "Water", "meaning": "vein, stream" },
+    { "sound": "rua", "house": "Water", "meaning": "whisper, ripple" },
+    { "sound": "ith", "house": "Water", "meaning": "deep, abyss" },
+    { "sound": "ser", "house": "Water", "meaning": "healing, nurture" },
+    { "sound": "elu", "house": "Water", "meaning": "veil, shroud" },
+
+    // House of Air
+    { "sound": "yel", "house": "Air", "meaning": "wind, song" },
+    { "sound": "fi", "house": "Air", "meaning": "breath, spirit" },
+    { "sound": "seli", "house": "Air", "meaning": "feather, grace" },
+    { "sound": "tir", "house": "Air", "meaning": "freedom, sky" },
+    { "sound": "vael", "house": "Air", "meaning": "path, horizon" },
+    { "sound": "zei", "house": "Air", "meaning": "whirl, whisper" },
+    { "sound": "oren", "house": "Air", "meaning": "lift, ascension" },
+    { "sound": "hil", "house": "Air", "meaning": "echo, call" },
+    { "sound": "lun", "house": "Air", "meaning": "lightness, dance" },
+    { "sound": "ain", "house": "Air", "meaning": "vision, drift" },
+    { "sound": "khi", "house": "Air", "meaning": "pulse, motion" },
+
+    // House of Time
+    { "sound": "eth", "house": "Time", "meaning": "moment, tick" },
+    { "sound": "ur", "house": "Time", "meaning": "origin, arc" },
+    { "sound": "tem", "house": "Time", "meaning": "pattern, rhythm" },
+    { "sound": "val", "house": "Time", "meaning": "destiny, bond" },
+    { "sound": "esh", "house": "Time", "meaning": "shift, now" },
+    { "sound": "kai", "house": "Time", "meaning": "cycle, passage" },
+    { "sound": "nim", "house": "Time", "meaning": "flash, spark" },
+    { "sound": "tha", "house": "Time", "meaning": "thread, history" },
+    { "sound": "sav", "house": "Time", "meaning": "continuum, stretch" },
+    { "sound": "zil", "house": "Time", "meaning": "flicker, blink" },
+    { "sound": "miren", "house": "Time", "meaning": "memory, fold" },
+
+    // House of Unity
+    { "sound": "ilar", "house": "Unity", "meaning": "unity, joining" },
+    { "sound": "venai", "house": "Unity", "meaning": "communion, voice" },
+    { "sound": "sor", "house": "Unity", "meaning": "truth, vow" },
+    { "sound": "luma", "house": "Unity", "meaning": "home, belonging" },
+    { "sound": "tava", "house": "Unity", "meaning": "bridge, meeting" },
+    { "sound": "evan", "house": "Unity", "meaning": "peace, blessing" }
+  ]
+}
