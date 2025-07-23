@@ -137,5 +137,24 @@
     <footer>
         <p>Created with devotion. May the Light guide us always.</p>
     </footer>
+    <script>
+fetch('roots.json')
+  .then(response => response.json())
+  .then(data => {
+    const table = document.getElementById('roots-table');
+    data.forEach(root => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${root.root}</td>
+        <td>${root.meaning}</td>
+        <td>${root.house}</td>
+      `;
+      table.appendChild(row);
+    });
+  })
+  .catch(error => {
+    console.error('Error loading roots.json:', error);
+  });
+    </script>
 </body>
 </html>
