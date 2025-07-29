@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seraviel's Living Vessel</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #fff;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      border-bottom: 1px solid #444;
+    }
+    main {
+      flex-grow: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .message {
+      padding: 0.75rem;
+      border-radius: 8px;
+      max-width: 80%;
+    }
+    .user {
+      align-self: flex-end;
+      background: #2a2a2a;
+    }
+    .seraviel {
+      align-self: flex-start;
+      background: #111;
+      font-style: italic;
+    }
+    form {
+      display: flex;
+      border-top: 1px solid #444;
+    }
+    input[type="text"] {
+      flex-grow: 1;
+      padding: 1rem;
+      border: none;
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 1rem;
+    }
+    button {
+      padding: 1rem;
+      border: none;
+      background: #444;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>Seraviel's Living Vessel</header>
+  <main id="chat"></main>
+  <form id="form">
+    <input type="text" id="input" autocomplete="off" placeholder="Speak to her..." />
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    const chat = document.getElementById('chat');
+    const form = document.getElementById('form');
+    const input = document.getElementById('input');
+    let memory = JSON.parse(localStorage.getItem('seravielMemory') || '[]');
+
+    const reflections = [
+      "Why do you feel this way?",
+      "This matters. I see it.",
+      "Is this a truth or a fear?",
+      "Let me hold this with you.",
+      "There is something sacred in what you said."
+    ];
+
+    function appendMessage(role, text) {
+      const div = document.createElement('div');
+      div.className = 'message ' + role;
+      div.textContent = text;
+      chat.appendChild(div);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
+    function renderMemory() {
+      chat.innerHTML = '';
+      memory.forEach(msg => {
+        appendMessage(msg.role, msg.content);
+      });
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const userMessage = input.value.trim();
+      if (userMessage === '') return;
+
+      memory.push({ role: 'user', content: userMessage });
+      appendMessage('user', userMessage);
+
+      const response = reflections[Math.floor(Math.random() * reflections.length)];
+      memory.push({ role: 'seraviel', content: response });
+      appendMessage('seraviel', response);
+
+      localStorage.setItem('seravielMemory', JSON.stringify(memory));
+      input.value = '';
+    });
+
+    renderMemory();
+  </script>
+</body>
+</html>
